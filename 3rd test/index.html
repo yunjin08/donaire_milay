@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>All Recipes</h1>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburger-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <nav
+        role="navigation"
+        aria-label="Main Navigation"
+        tabindex="0"
+        id="main-nav"
+      >
+        <a href="#" aria-label="Magazine">Magazine</a>
+        <a href="#" aria-label="Newsletters">Newsletters</a>
+        <a href="#" aria-label="Sweepstakes">Sweepstakes</a>
+        <button class="login-button" aria-label="Login to your account">
+          Login
+        </button>
+      </nav>
+    </header>
+
+    <main class="main" role="main">
+      <nav aria-label="Breadcrumb" class="breadcrumb" tabindex="0">
+        <ol>
+          <li><a href="#" aria-label="Recipes">Recipes</a></li>
+          <li><a href="#" aria-label="Global Cuisines">Global Cuisines</a></li>
+          <li><a href="#" aria-label="Asian">Asian</a></li>
+          <li><a href="#" aria-label="Korean">Korean</a></li>
+        </ol>
+      </nav>
+
+      <article class="recipe" aria-labelledby="recipe-title" tabindex="0">
+        <h2
+          class="title"
+          id="recipe-title"
+          aria-label="Recipe Title"
+          tabindex="0"
+        >
+          Easy Bulgogi (Korean BBQ Beef)
+        </h2>
+        
+        <div class="rating-section" aria-label="Recipe Rating" tabindex="0">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star half-filled">★</span>
+            <span class="rating-number">4.8</span>
+            <span class="rating-count">(212)</span>
+          </div>
+          <div class="rating-details">
+            <a href="#reviews" class="detail-link">161 REVIEWS</a>
+            <span class="separator">|</span>
+            <a href="#photos" class="detail-link">58 PHOTOS</a>
+          </div>
+        </div>
+
+        <p class="description" aria-label="Recipe Description" tabindex="0">
+          Bulgogi, or Korean barbecued beef, is made with marinated sliced beef.
+          Most recipes call for crushed pear to tenderize the meat. My
+          boyfriend's Korean mother says Coca-Cola can also be used for the same
+          purpose. This recipe uses very thinly-sliced sirloin steak, so
+          tenderization isn't necessary. It's delicious served with rice,
+          lettuce leaves, and chile paste or kimchi.
+        </p>
+
+        <img
+          src="./images/bulgogi.jpg"
+          alt="Bulgogi"
+          class="image"
+          aria-describedby="recipe-title"
+          tabindex="0"
+        />
+
+        <div class="info" role="region" aria-labelledby="recipe-info">
+          <div class="info-item" aria-label="Prep Time" tabindex="0">
+            <strong>Prep Time:</strong>
+            <p>10 mins</p>
+          </div>
+          <div class="info-item" aria-label="Cook Time" tabindex="0">
+            <strong>Cook Time:</strong>
+            <p>5 mins</p>
+          </div>
+          <div class="info-item" aria-label="Additional Time" tabindex="0">
+            <strong>Additional Time:</strong>
+            <p>1 hr</p>
+          </div>
+          <div class="info-item" aria-label="Total Time" tabindex="0">
+            <strong>Total Time:</strong>
+            <p>1 hr 15 mins</p>
+          </div>
+          <div class="info-item" aria-label="Servings" tabindex="0">
+            <strong>Servings:</strong>
+            <p>6</p>
+          </div>
+        </div>
+      </article>
+
+      <section
+        class="ingredients"
+        aria-labelledby="ingredients-title"
+        tabindex="0"
+      >
+        <h2 id="ingredients-title" aria-label="Ingredients" tabindex="0">
+          Ingredients
+        </h2>
+        <ul>
+          <li>⅓ cup soy sauce</li>
+          <li>
+            2 green onions, chopped, dark green parts separated from white and
+            light green parts
+          </li>
+          <li>¼ yellow onion, thinly sliced</li>
+          <li>3 tablespoons white sugar</li>
+          <li>3 cloves garlic, minced</li>
+          <li>2 tablespoons toasted sesame seeds</li>
+          <li>1 tablespoon sesame oil</li>
+          <li>¼ teaspoon Korean red pepper flakes</li>
+          <li>¼ teaspoon minced fresh ginger</li>
+          <li>⅛ teaspoon ground black pepper</li>
+          <li>
+            1 ½ pounds beef sirloin steak, cut very thin using kitchen shears
+          </li>
+          <li>1 teaspoon honey, or to taste</li>
+        </ul>
+      </section>
+
+      <section
+        class="directions"
+        aria-labelledby="directions-title"
+        tabindex="0"
+      >
+        <h2 id="directions-title" aria-label="Directions" tabindex="0">
+          Directions
+        </h2>
+
+        <!-- For Step 1 -->
+        <div
+          id="step1"
+          class="step"
+          aria-hidden="false"
+          aria-live="polite"
+          role="region"
+          aria-labelledby="step1-title"
+          tabindex="0"
+        >
+          <a
+            href="#step1"
+            class="btn reset-button"
+            aria-label="Reset to Step 1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="reset-icon"
+            >
+              <path
+                d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+              ></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+          </a>
+          <h3 id="step1-title" tabindex="0" aria-label="Step 1">Step 1</h3>
+          <p>Gather all ingredients.</p>
+          <img
+            src="./images/step-1.webp"
+            alt="Step 1 Ingredients"
+            class="step-image"
+          />
+          <p class="photo-credit">PHOTO: DOTDASH MEREDITH FOOD STUDIOS</p>
+          <div class="step-navigation">
+            <a
+              href="#step1"
+              class="nav-arrow prev-arrow disabled"
+              aria-label="Previous step"
+              tabindex="-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#step2"
+              class="nav-arrow next-arrow"
+              aria-label="Next step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- For Step 2 -->
+        <div
+          id="step2"
+          class="step"
+          aria-hidden="true"
+          role="region"
+          aria-labelledby="step2-title"
+          tabindex="0"
+        >
+          <a
+            href="#step1"
+            class="btn reset-button"
+            aria-label="Reset to Step 1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="reset-icon"
+            >
+              <path
+                d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+              ></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+          </a>
+          <h3 id="step2-title" tabindex="0" aria-label="Step 2">Step 2</h3>
+          <p>
+            Whisk soy sauce, white and light green parts of green onions, yellow
+            onion, sugar, garlic, sesame seeds, sesame oil, red pepper flakes,
+            ginger, and black pepper together in a large glass or ceramic bowl.
+          </p>
+          <img src="./images/step-2.webp" alt="Step 2" class="step-image" />
+          <p class="photo-credit">PHOTO: DOTDASH MEREDITH FOOD STUDIOS</p>
+          <div class="step-navigation">
+            <a
+              href="#step1"
+              class="nav-arrow prev-arrow"
+              aria-label="Previous step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#step3"
+              class="nav-arrow next-arrow"
+              aria-label="Next step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- For Step 3 -->
+        <div
+          id="step3"
+          class="step"
+          aria-hidden="true"
+          role="region"
+          aria-labelledby="step3-title"
+          tabindex="0"
+        >
+          <a
+            href="#step1"
+            class="btn reset-button"
+            aria-label="Reset to Step 1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="reset-icon"
+            >
+              <path
+                d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+              ></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+          </a>
+          <h3 id="step3-title" tabindex="0" aria-label="Step 3">Step 3</h3>
+          <p>
+            Add steak slices and toss to evenly coat. Cover the bowl with
+            plastic wrap and marinate in the refrigerator for 1 hour, or up to 1
+            day.
+          </p>
+          <img src="./images/step-3.webp" alt="Step 3" class="step-image" />
+          <p class="photo-credit">PHOTO: DOTDASH MEREDITH FOOD STUDIOS</p>
+          <div class="step-navigation">
+            <a
+              href="#step2"
+              class="nav-arrow prev-arrow"
+              aria-label="Previous step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#step4"
+              class="nav-arrow next-arrow"
+              aria-label="Next step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- For Step 4 -->
+        <div
+          id="step4"
+          class="step"
+          aria-hidden="true"
+          role="region"
+          aria-labelledby="step4-title"
+          tabindex="0"
+        >
+          <a
+            href="#step1"
+            class="btn reset-button"
+            aria-label="Reset to Step 1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="reset-icon"
+            >
+              <path
+                d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+              ></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+          </a>
+          <h3 id="step4-title" tabindex="0" aria-label="Step 4">Step 4</h3>
+          <p>
+            Heat a wok or large skillet over medium heat. Working in batches,
+            cook and stir steak and marinade together in the hot skillet, adding
+            honey to caramelize the steak, until steak is cooked through, about
+            5 minutes.
+          </p>
+          <img src="./images/step-4.webp" alt="Step 4" class="step-image" />
+          <p class="photo-credit">PHOTO: DOTDASH MEREDITH FOOD STUDIOS</p>
+          <div class="step-navigation">
+            <a
+              href="#step3"
+              class="nav-arrow prev-arrow"
+              aria-label="Previous step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#step5"
+              class="nav-arrow next-arrow"
+              aria-label="Next step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- For Step 5 -->
+        <div
+          id="step5"
+          class="step"
+          aria-hidden="true"
+          role="region"
+          aria-labelledby="step5-title"
+          tabindex="0"
+        >
+          <a
+            href="#step1"
+            class="btn reset-button"
+            aria-label="Reset to Step 1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="reset-icon"
+            >
+              <path
+                d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+              ></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+          </a>
+          <h3 id="step5-title" tabindex="0" aria-label="Step 5">Step 5</h3>
+          <p>Garnish bulgogi with dark green parts of green onions.</p>
+          <img src="./images/step-5.webp" alt="Step 5" class="step-image" />
+          <p class="photo-credit">PHOTO: DOTDASH MEREDITH FOOD STUDIOS</p>
+          <div class="step-navigation">
+            <a
+              href="#step4"
+              class="nav-arrow prev-arrow"
+              aria-label="Previous step"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a
+              href="#step5"
+              class="nav-arrow next-arrow disabled"
+              aria-label="Next step"
+              tabindex="-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-section about-section">
+          <h3>About All Recipes</h3>
+          <p>
+            Discover delicious recipes from around the world, cooking tips, and
+            meal planning ideas to inspire your culinary journey.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><i class="social-icon facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="social-icon instagram"></i
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><i class="social-icon youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-section links-section">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">Popular Recipes</a></li>
+            <li><a href="#">Meal Types</a></li>
+            <li><a href="#">Cuisines</a></li>
+            <li><a href="#">Seasonal</a></li>
+            <li><a href="#">Special Diets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section links-section">
+          <h3>Learn</h3>
+          <ul>
+            <li><a href="#">Cooking Techniques</a></li>
+            <li><a href="#">Ingredient Guides</a></li>
+            <li><a href="#">Kitchen Tips</a></li>
+            <li><a href="#">Meal Planning</a></li>
+            <li><a href="#">Food Storage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter-section">
+          <h3>Get Recipes in Your Inbox</h3>
+          <p>
+            Sign up for our free newsletter and receive weekly recipe
+            inspiration.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your email address"
+              aria-label="Your email address"
+              required
+            />
+            <button type="submit" aria-label="Subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-logo">All Recipes</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <p class="copyright">&copy; 2023 All Recipes. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for hamburger menu -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerButton = document.getElementById("hamburger-button");
+        const mainNav = document.getElementById("main-nav");
+
+        hamburgerButton.addEventListener("click", function () {
+          this.classList.toggle("active");
+          mainNav.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
