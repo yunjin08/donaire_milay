@@ -26,7 +26,8 @@ a {
 .header {
   background-color: #cee3f8;
   padding: 5px 0;
-  border-bottom: 1px solid #5f99cf;
+  border-bottom: 1px solid rgb(135, 135, 135);
+  z-index: 0;
 }
 
 .logo {
@@ -44,6 +45,7 @@ a {
   background-color: #f8f8f8;
   border: 1px solid #ccc;
   border-bottom: 1px solid transparent;
+  z-index: 10;
 }
 
 .user-controls {
@@ -510,6 +512,10 @@ ul {
   position: relative;
 }
 
+.redditLogo {
+  width: 14rem;
+  height: 2rem;
+}
 
 .comment {
   padding: 10px;
