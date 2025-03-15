@@ -10,6 +10,14 @@ body {
   overflow: hidden;
 }
 
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .content {
+    overflow: auto;
+  }
+}
+
+
 a {
   color: #369;
   text-decoration: none;
@@ -27,9 +35,21 @@ a {
 }
 
 .user-panel {
-  float: right;
   margin-right: 20px;
   color: #336699;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  padding: 2px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .clear {
@@ -41,35 +61,107 @@ a {
   display: flex;
 }
 
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
 .sidebar {
-  width: 150px;
-  padding: 10px;
-  background-color: #f0f0f0;
+  width: 180px;
+  background-color: #e5edf9;
+}
+
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    display: flex;
+  }
+  .sidebar-section, .sidebar-section-2 {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .sidebar-section {
   margin-bottom: 15px;
+  font-size:9px;
 }
+
+.sidebar-section-2 .sidebar-section {
+  background-color: #bbcfea;
+  padding: 2px;
+  padding-left: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-section:last-child {
+  padding-left: 8px;
+}
+
+.sidebar-item {
+  padding: 4px;
+  padding-left: 16px;
+}
+
+.sidebar-item:nth-child(8) {
+  color: red;
+  background-color: white;
+}
+
+.sidebar ul li {
+  font-size: 10px;
+  margin-top: 3px;
+  color: rgb(76, 76, 76);
+}
+
 
 .sidebar-title {
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 12px;
 }
 
 .main-content {
   flex: 1;
-  background-color: white;
-  padding: 5px;
+  font-size: 9px;
+  background-color: #f0f0f0;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
+  overflow: auto;
 }
 
+@media (max-width: 768px) {
+  .main-content {
+    overflow: visible;
+  }
+}
+
+
 .tab-menu {
-  background-color: #f8f8f8;
+  background-color: #e5e5e5;
+  display: flex;
+  flex: 1;
   border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 3px;
-  margin-bottom: 10px;
+  padding-right: 24px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .tab-menu {
+  padding-bottom: 15px;
+  }
 }
 
 .tab-button {
@@ -83,6 +175,14 @@ a {
   cursor: pointer;
 }
 
+.tab-button:hover {
+  background-color: #e0e7f1;
+}
+
+.tab-button:first-child {
+  color: red;
+}
+
 .tab-button.active {
   background-color: white;
 }
@@ -90,19 +190,23 @@ a {
 .search-bar {
   float: right;
   margin-right: 5px;
+  display: flex;
+
+}
+
+.search-bar button {
+  height: 21px;
+  border: 1px solid #ccc;
+  background-color: white;
 }
 
 .search-input {
   border: 1px solid #ccc;
-  border-radius: 3px;
   padding: 2px;
   width: 200px;
+  height: 15px;
 }
 
-.user-controls {
-  float: right;
-  margin-top: 0;
-}
 
 .user-button {
   border: 1px solid #ccc;
@@ -110,7 +214,8 @@ a {
   background-color: #f0f0f0;
   padding: 2px 6px;
   margin-left: 5px;
-  font-size: 11px;
+  font-size: 9px;
+  white-space: nowrap;
 }
 
 .posts {
@@ -118,33 +223,64 @@ a {
   padding: 0;
   margin: 0;
   width: 50%;
+  height: 100%;
 }
 
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .posts {
+    width: 100%;
+  }
+}
+
+
 .post-container {
-  margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid #ccc; /* Sets border on all sides */
+  border-bottom: none; /* Removes bottom border */
   flex-direction: row;
+  height: 100%;
   width: 100%;
 }
 
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .post-container {
+    flex-direction: column;
+  }
+}
+
+
 .post {
   display: flex;
-  padding: 5px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.post:hover {
+  background-color: #c4d4eb;
+
 }
 
 .post-rank {
   width: 20px;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-right: 5px;
   color: #c6c6c6;
-  font-size: 14px;
+  font-size: 9px;
 }
 
 .voting {
   width: 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .vote-arrow {
@@ -164,9 +300,8 @@ a {
 
 .post-thumbnail {
   width: 70px;
-  height: 50px;
+  background-color: blue;
   margin-right: 5px;
-  background-color: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,35 +309,104 @@ a {
 
 .post-content {
   flex: 1;
+  padding: 16px 16px 3px 16px;
 }
 
 .post-title {
-  font-size: 14px;
+  font-size: 10px;
   margin-bottom: 2px;
 }
 
 .post-info {
   color: #888;
-  font-size: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  font-size: 9px;
 }
+
+.post-score {
+  background-color: white;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+
+.post-votes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vote-1 {
+  color: red;
+}
+
+.vote-2 {
+  color: blue;
+}
+
 
 .post-options a {
   color: #888;
-  font-size: 10px;
+  font-size: px;
   margin-right: 4px;
 }
 
+.post-edit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-edit-buttons {
+  width: 100%;
+  margin-right: 30px;
+  align-items: end;
+}
+
+.post-edit div input {
+  width: 100%;
+  padding: 4px;
+}
+
+
+.format-help {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.format-help a {
+  color: #0079d3;
+  text-decoration: none;
+  margin-right: -10px;
+}
+
+ a:hover {
+  text-decoration: underline;
+}
+
 .comments-section {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: white;
   border: 1px solid #ccc;
   width: 50%;
+  font-size: 9px;
+}
+
+/* Apply column layout for small screens */
+@media (max-width: 768px) {
+  .comments-section {
+    width: 100%;
+  }
 }
 
 .comment {
-  margin-bottom: 10px;
-  border-bottom: 1px dotted #eee;
   padding-bottom: 5px;
 }
 
@@ -227,6 +431,120 @@ a {
   margin-right: 4px;
 }
 
+.comment-thread {
+  position: relative;
+  margin: auto;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-size: 10px;
+  background: rgb(234, 234, 234);
+  z-index: 0;
+}
+
+.comment header span {
+  color: gray;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.comment-thread button {
+  height: 1.5rem;
+  margin-top: 4px;
+}
+
+.comment-thread::after {
+  content: "";
+  position: absolute;
+  top: -1px; /* Align with the top border */
+  right: 30px; /* Adjust position */
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent; /* Increased for clarity */
+  border-right: 13px solid transparent;
+  border-top: 13px solid black; /* Gray border for left & right */
+}
+
+.comment-thread::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Adjust to ensure proper overlay */
+  right: 31px; /* Fine-tuned alignment */
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid black; /* White fill */
+  z-index: 1; /* Ensure it overlays correctly */
+}
+
+.floating-menu {
+  position:absolute;
+  bottom: -2px;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .floating-menu {
+    bottom: -14px;
+  }
+}
+
+.sub-menu {
+  width: 50%;
+  position: relative;
+}
+
+.main-menu {
+  width: 50%;
+  position: relative;
+}
+
+
+.comment {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.comments {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  position: relative;
+  border-left: 1px solid #cecece;
+  position: relative;
+}
+
+.perma {
+  color: gray;
+  font-size: 8px;
+}
+
+
+.comment header {
+  font-weight: bold;
+  color: #333;
+}
+.comment p {
+  margin: 5px 0;
+}
+.replies {
+  margin-left: 30px;
+  border-left: 1px solid #cecece;
+  padding-left: 10px;
+}
 .up {
   color: #ff8b60;
 }
@@ -236,8 +554,9 @@ a {
 }
 
 .pagination {
-  text-align: center;
-  margin-top: 10px;
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 20px;
 }
 
 .pagination-button {
