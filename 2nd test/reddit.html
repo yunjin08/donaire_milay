@@ -6,78 +6,87 @@
   <title>reddit: the front page of the internet</title>
 </head>
 <body>
-  <div class="header">
+  <header class="header">
     <div class="logo">
       <a href="/"><img src="/api/placeholder/100/30" alt="reddit" /></a>
     </div>
-    <div class="user-panel">
-      7hundredand77, you're back! <a href="#">preferences</a> | <a href="#">logout</a> :( 
-    </div>
     <div class="clear"></div>
-  </div>
+  </header>
   
-  <div class="content">
-    <div class="sidebar">
-      <div class="sidebar-section">
-        <div class="sidebar-item"><a href="#">FRONT PAGE</a></div>
-        <div class="sidebar-item"><a href="#">PICS</a></div>
-        <div class="sidebar-item"><a href="#">SCIENCE</a></div>
-        <div class="sidebar-item"><a href="#">TECHNOLOGY</a></div>
-        <div class="sidebar-item"><a href="#">ASK REDDIT</a></div>
-        <div class="sidebar-item"><a href="#">FUNNY</a></div>
-        <div class="sidebar-item"><a href="#">WTF</a></div>
-        <div class="sidebar-item"><a href="#">IAMA</a></div>
-        <div class="sidebar-item"><a href="#">WORLD NEWS</a></div>
-        <div class="sidebar-item"><a href="#">TODAYILEARNED</a></div>
-        <div class="sidebar-item"><a href="#">WORLDNEWS</a></div>
-        <div class="sidebar-item"><a href="#">WEBDESIGN</a></div>
-        <div class="sidebar-item"><a href="#">ATHEIST</a></div>
-        <div class="sidebar-item"><a href="#">FFFFFFUUUUUUUUUU</a></div>
-        <div class="sidebar-item"><a href="#">(MORE)</a></div>
-      </div>
+  <main class="content">
+    <aside class="sidebar">
+      <nav class="sidebar-section">
+        <ul>
+          <li class="sidebar-item">🔥 FRONT PAGE</li>
+          <li class="sidebar-item">🔥 PICS</li>
+          <li class="sidebar-item">🔥 SCIENCE</li>
+          <li class="sidebar-item">🔥 TECHNOLOGY</li>
+          <li class="sidebar-item">🔥 ASK REDDIT</li>
+          <li class="sidebar-item">🔥 FUNNY</li>
+          <li class="sidebar-item">🔥 WTF</li>
+          <li class="sidebar-item">🔥 IAMA</li>
+          <li class="sidebar-item">🔥 WORLD NEWS</li>
+          <li class="sidebar-item">🔥 TODAYILEARNED</li>
+          <li class="sidebar-item">🔥 WORLDNEWS</li>
+          <li class="sidebar-item">🔥 WEBDESIGN</li>
+          <li class="sidebar-item">🔥 ATHEIST</li>
+          <li class="sidebar-item">🔥 FFFFFFUUUUUUUUUU</li>
+          <li class="sidebar-item">(MORE)</li>
+        </ul>        
+      </nav>
       
-      <div class="sidebar-section">
-        <div class="sidebar-title">Submit a link</div>
-        <div>to anything interesting</div>
-        <div>news article, blog entry, video, picture...</div>
-      </div>
+      <section class="sidebar-section-2">
+      <section class="sidebar-section">
+        <h2 class="sidebar-title"><a href="/">Submit a link</a></h2>
+        <p>to anything interesting</p>
+        <p>news article, blog entry, video, picture...</p>
+      </section>
       
-      <div class="sidebar-section">
-        <div class="sidebar-title">Create Community</div>
-        <div>for your LARPing group</div>
-        <div>...because nothing in life is free (except reddit!)</div>
-        <div>here on the side</div>
-      </div>
+      <section class="sidebar-section">
+        <h2 class="sidebar-title"><a href='/'>Create Community</a></h2>
+        <p>for your LARPing group</p>
+        <p>...because nothing in life is free (except reddit!)</p>
+        <p>here on the side</p>
+      </section>
       
-      <div class="sidebar-section">
-        <div class="sidebar-title">Little Big Planet</div>
-        <div>tiniest ad in the world</div>
-      </div>
-    </div>
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">Little Big Planet</h2>
+        <p>tiniest ad in the world</p>
+      </section>
+      <section>
+    </aside>
     
-    <div class="main-content">
-      <div class="tab-menu">
-        <a href="#" class="tab-button">what's hot</a>
-        <a href="#" class="tab-button">new</a>
-        <a href="#" class="tab-button">controversial</a>
-        <a href="#" class="tab-button">top</a>
-        <a href="#" class="tab-button">saved</a>
-        
-        <div class="search-bar">
-          <input type="text" class="search-input">
-          <button>search</button>
+    <section class="main-content">
+      <nav class="tab-menu">
+        <div class='main-menu'>
+          <div class='floating-menu'>
+            <a href="#" class="tab-button">what's hot</a>
+            <a href="#" class="tab-button">new</a>
+            <a href="#" class="tab-button">controversial</a>
+            <a href="#" class="tab-button">top</a>
+            <a href="#" class="tab-button">saved</a>
+          </div>
         </div>
-        <div class="clear"></div>
-      </div>
+        <div class="sub-menu">
+          <div class="user-panel">
+            7hundredand77, you're back! <a href="#">preferences</a> | <a href="#">logout</a> :( 
+          </div>
+          <div class="search-bar">
+            <input type="text" class="search-input">
+            <button>🔍</button>
+
+            <section class="user-controls">
+              <a href="#" class="user-button">1 New Msg</a>
+              <a href="#" class="user-button">53,211 Link</a>
+              <a href="#" class="user-button">4,887 Comment</a>
+            </section>
+          </div>
+        </div>
+      </nav>
       
-      <div class="user-controls">
-        <a href="#" class="user-button">1 New Msg</a>
-        <a href="#" class="user-button">53,211 Link</a>
-        <a href="#" class="user-button">4,887 Comment</a>
-      </div>
       <div class="clear"></div>
       
-      <div class=post-container>
+      <section class="post-container">
         <ul class="posts">
           <li class="post">
             <div class="post-rank">1</div>
@@ -86,102 +95,306 @@
               <div class="vote-score">215</div>
               <span class="vote-arrow">▼</span>
             </div>
-            <div class="post-thumbnail">
+            <figure class="post-thumbnail">
               <img src="/api/placeholder/70/50" alt="thumbnail">
-            </div>
-            <div class="post-content">
-              <div class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a> (cnn.com)</div>
-              <div class="post-info">submitted 19 hours ago by krispikricker</div>
-              <div class="post-options">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
                 <a href="#">623 comments</a>
                 <a href="#">share</a>
                 <a href="#">save</a>
                 <a href="#">hide</a>
                 <a href="#">report</a>
-              </div>
-            </div>
+              </nav>
+            </article>
           </li>
-          
           <li class="post">
-            <div class="post-rank">2</div>
+            <div class="post-rank">1</div>
             <div class="voting">
-              <span class="vote-arrow up">▲</span>
-              <div class="vote-score">232</div>
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
               <span class="vote-arrow">▼</span>
             </div>
-            <div class="post-content">
-              <div class="post-title"><a href="#">IAM the guy who created this design AMA</a> (i.imgur.com)</div>
-              <div class="post-info">submitted 19 hours ago by 7hundredand77</div>
-              <div class="post-options">
-                <a href="#">280 comments</a>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
                 <a href="#">share</a>
                 <a href="#">save</a>
                 <a href="#">hide</a>
                 <a href="#">report</a>
-              </div>
-            </div>
+              </nav>
+            </article>
           </li>
-          
-          <!-- More posts would go here -->
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <li class="post">
+            <div class="post-rank">1</div>
+            <div class="voting">
+              <span class="vote-arrow">▲</span>
+              <div class="vote-score">215</div>
+              <span class="vote-arrow">▼</span>
+            </div>
+            <figure class="post-thumbnail">
+              <img src="/api/placeholder/70/50" alt="thumbnail">
+            </figure>
+            <article class="post-content">
+              <h3 class="post-title"><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h3>
+              <p class="post-info">submitted 19 hours ago by krispikricker</p>
+              <nav class="post-options">
+                <a href="#">623 comments</a>
+                <a href="#">share</a>
+                <a href="#">save</a>
+                <a href="#">hide</a>
+                <a href="#">report</a>
+              </nav>
+            </article>
+          </li>
+          <nav class="pagination">
+            <a href="#" class="pagination-button">&#8592; NEWER</a>
+            <a href="#" class="pagination-button">OLDER &#8594;</a>
+          </nav>
         </ul>
-        
-        <div class="comments-section">
+        <section class="comments-section">
           <div class="post-content">
-            <div class="post-title">IAM the guy who created this design AMA (i.imgur.com)</div>
+            <a href='/' class="post-title">IAM the guy who created this design AMA </a>(i.imgur.com)
             <div>http://img3.imageshack.us/img3/9607/goodlokingnew23.jpg</div>
             <div class="post-info">
-              <span>232 points</span> (71% like it)
-              <span>380 up votes</span>
-              <span>158 down votes</span>
-              <div>submitted on 01 Feb 2011</div>
-              <div>280 comments sort by</div>
-            </div>
-            <button>save</button>
-            <a href="#">formatting help</a>
-          </div>
-          
-          <div class="comment">
-            <div class="comment-info">
-              <a href="#">UserNumber82</a> 47 points 21 hours ago
-            </div>
-            <div class="comment-text">
-              Wow, the first reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors this should be very cool.
-            </div>
-            <div class="comment-text">
-              Only suggestion is to have hover the width of the scores column for each post and the subreddit side bar so there is more room for the content.
-            </div>
-            <div class="comment-options">
-              <a href="#">permalink</a>
-              <a href="#">parent</a>
-              <a href="#">reply</a>
+              <div class="post-score">
+                <div> 
+                  <strong>232 points</strong>
+                  <span> (71% like it)</span>
+                </div>
+                <div class="post-votes">
+                  <span class="vote-1">380 up votes</span>
+                  <span class="vote-2">158 down votes</span>
+                </div>
+              </div>
+              <div>
+                <div>submitted on 01 Feb 2011</div>
+                <strong>280 comments sort by</strong>
+              </div>
             </div>
           </div>
           
-          <div class="comment">
-            <div class="comment-info">
-              <a href="#">7hundredand77</a> 14 points 20 hours ago
+          <div class="comment-thread">
+            <div class="post-edit">
+              <div class="post-edit-buttons">
+                <input/>
+                <div class='format-help'>
+                  <a  href="#">formatting help</a>
+                </div>
+              </div>
+              <button>save</button>
             </div>
-            <div class="comment-text">
-              Hi, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively. A sweet spot with columns needs to be found where there is enough space to view everything perfectly. Since I just quickly put this one together, I didn't really spend much time finding that right balance.
-            </div>
-            <div class="comment-options">
-              <a href="#">permalink</a>
-              <a href="#">parent</a>
-              <a href="#">edit</a>
-              <a href="#">delete</a>
-              <a href="#">reply</a>
-            </div>
-          </div>
-          
-          <!-- More comments would go here -->
+            <article class="comments">
+              <div class='arrows'>
+                <p>&#8593; </p>
+                <p> &#8595; </p>
+              </div>
+                <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                <p>
+                  Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide-screen monitors, this could be very cool.
+                  <br><br>
+                  Only suggestion is to lower the width of the scores column for each post and the subreddit sidebar so there is more room for the content.
+                </p>
+                <strong class="perma"> permalink    report  reply</strong>
+                <div class="replies">
+                    <article class="comment">
+                      <div class='arrows'>
+                        <p>&#8593; </p>
+                        <p> &#8595; </p>
+                      </div>
+                      <header>7hundred7 <span>47 points 21 hours ago [-]</span></header>
+                        <p>Ha, yeah, since I know many people use widescreen monitors these days...</p>
+                        <strong class="perma"> permalink    report  reply</strong>
+                        <div class="replies">
+                            <article class="comment">
+                              <div class='arrows'>
+                                <p>&#8593; </p>
+                                <p> &#8595; </p>
+                              </div>
+                              <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                                <p>This looks like an email client. Brilliant!</p>
+                                <strong class="perma"> permalink    report  reply</strong>
+                            </article>
+                        </div>
+                    </article>
+                    <article class="comment">
+                      <div class='arrows'>
+                        <p>&#8593; </p>
+                        <p> &#8595; </p>
+                      </div>
+                      <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                        <p>Except, let's be honest; I only rarely maximize windows...</p>
+                        <strong class="perma"> permalink    report  reply</strong>
+                    </article>
+                </div>
+            </article>
+            <article class="comments">
+              <div class='arrows'>
+                <p>&#8593; </p>
+                <p> &#8595; </p>
+              </div>
+                <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                <p>
+                  Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide-screen monitors, this could be very cool.
+                  <br><br>
+                  Only suggestion is to lower the width of the scores column for each post and the subreddit sidebar so there is more room for the content.
+                </p>
+                <strong class="perma"> permalink    report  reply</strong>
+                <div class="replies">
+                    <article class="comment">
+                      <div class='arrows'>
+                        <p>&#8593; </p>
+                        <p> &#8595; </p>
+                      </div>
+                      <header>7hundred7 <span>47 points 21 hours ago [-]</span></header>
+                        <p>Ha, yeah, since I know many people use widescreen monitors these days...</p>
+                        <strong class="perma"> permalink    report  reply</strong>
+                        <div class="replies">
+                            <article class="comment">
+                              <div class='arrows'>
+                                <p>&#8593; </p>
+                                <p> &#8595; </p>
+                              </div>
+                              <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                                <p>This looks like an email client. Brilliant!</p>
+                                <strong class="perma"> permalink    report  reply</strong>
+                            </article>
+                        </div>
+                    </article>
+                    <article class="comment">
+                      <div class='arrows'>
+                        <p>&#8593; </p>
+                        <p> &#8595; </p>
+                      </div>
+                      <header>UserNumber42 <span>47 points 21 hours ago [-]</span></header>
+                        <p>Except, let's be honest; I only rarely maximize windows...</p>
+                        <strong class="perma"> permalink    report  reply</strong>
+                    </article>
+                </div>
+            </article>
         </div>
-      </div>
-      
-      <div class="pagination">
-        <a href="#" class="pagination-button">NEWER</a>
-        <a href="#" class="pagination-button">OLDER</a>
-      </div>
-    </div>
-  </div>
+        </div>
+      </section>
+    
+    </section>
+    </section>
+  </main>
 </body>
 </html>
