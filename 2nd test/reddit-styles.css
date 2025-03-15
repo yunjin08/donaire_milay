@@ -1,4 +1,8 @@
-body {
+/**
+ * Base Elements
+ * Basic styling for HTML elements
+ */
+ body {
   font-family: Verdana, Arial, sans-serif;
   font-size: 9px;
   margin: 0;
@@ -10,17 +14,35 @@ body {
   overflow: hidden;
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .content {
-    overflow: auto;
-  }
-}
-
-
 a {
   color: #369;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/**
+ * Layout Structure
+ * Main layout elements and containers
+ */
+.clear {
+  clear: both;
+}
+
+.content {
+  height: 100%;
+}
+
+.main-reddit-content {
+  display: flex;
+  height: 100%;
 }
 
 .littleBig {
@@ -28,6 +50,10 @@ a {
   width: 11.1rem;
 }
 
+/**
+ * Header Styling
+ * Logo and header elements
+ */
 .header {
   background-color: #DCECFF;
   padding: 5px 0;
@@ -40,6 +66,15 @@ a {
   margin-left: 20px;
 }
 
+.redditLogo {
+  width: 14rem;
+  height: 2rem;
+}
+
+/**
+ * User Navigation
+ * User panel and controls
+ */
 .user-panel {
   margin-right: 20px;
   color: #336699;
@@ -60,35 +95,77 @@ a {
   flex: 1;
 }
 
-.clear {
-  clear: both;
+.user-button {
+  border: 1px solid #85888A;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  padding: 4px 6px;
+  margin-left: 5px;
+  font-size: 10px;
+  white-space: nowrap;
 }
 
-.content {
-  height: 100%;
-}
-
-.main-reddit-content {
+/**
+ * Navigation Tabs
+ * Tab menu and search bar
+ */
+.tab-menu {
+  background-color: #EEF1F2;
   display: flex;
-  height: 100%;
+  flex: 1;
+  padding: 6px;
+  padding-right: 24px;
+  position: relative;
 }
 
-@media (max-width: 1040px) {
-  .main-reddit-content {
-    flex-direction: column;
-  }
-  .user-panel {
-    display: none;
-  }
+.tab-button {
+  background-color: #f0f0f0;
+  border: 1px solid #85888A;
+  border-radius: 1px;
+  color: #3468AB;
+  font-weight: bold;
+  padding: 6px 6px;
+  margin-right: 2px;
+  cursor: pointer;
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .content {
-    flex-direction: column;
-  }
+.tab-button:hover {
+  background-color: #e0e7f1;
 }
 
+.tab-button:first-child {
+  background-color: #FBFBFB;
+  color: red;
+  border-bottom: none;
+}
+
+.tab-button.active {
+  background-color: white;
+}
+
+.search-bar {
+  float: right;
+  margin-right: 5px;
+  display: flex;
+}
+
+.search-bar button {
+  height: 23px;
+  border: 1px solid #85888A;
+  background-color: white;
+}
+
+.search-input {
+  border: 1px solid #85888A;
+  padding: 3px;
+  width: 200px;
+  height: 15px;
+}
+
+/**
+ * Sidebar
+ * Left sidebar with navigation links
+ */
 .sidebar {
   margin-top: -1.5rem;
   width: 200px;
@@ -99,27 +176,9 @@ a {
   z-index: 50;
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .sidebar {
-    width: 100%;
-    margin-top: 0px;
-    max-height: 350px;
-    display: flex;
-  }
-  .sidebar-section, .sidebar-section-2 {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
 .sidebar-section {
   margin-bottom: 15px;
-  font-size:9px;
+  font-size: 9px;
   color: #8F9296;
 }
 
@@ -129,11 +188,6 @@ a {
   padding: 2px;
   padding-left: 16px;
   padding-right: 16px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 
 .sidebar-section:last-child {
@@ -166,21 +220,16 @@ ul {
   margin: 0;
 }
 
-@media (max-width: 1040px) {
-  .sidebar-footer strong {
-    padding-left: 65px;
-    overflow: visible;
-  }
-}
-
-
-
 .sidebar-title {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 12px;
 }
 
+/**
+ * Main Content
+ * Post listings and primary content area
+ */
 .main-content {
   flex: 1;
   font-size: 9px;
@@ -188,88 +237,6 @@ ul {
   border-left: 1px solid #85888A;
   border-right: 1px solid #85888A;
   overflow: scroll;
-}
-
-@media (max-width: 1040px) {
-  .main-content {
-    overflow: visible;
-  }
-}
-
-
-.tab-menu {
-  background-color: #EEF1F2;
-  display: flex;
-  flex: 1;
-  padding: 6px;
-  padding-right: 24px;
-  position: relative;
-}
-
-@media (max-width: 1040px) {
-  .tab-menu {
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-  }
-}
-
-.tab-button {
-  background-color: #f0f0f0;
-  border: 1px solid #85888A;
-  border-radius: 1px;
-  color: #3468AB;
-  font-weight: bold;
-  padding: 6px 6px;
-  margin-right: 2px;
-  cursor: pointer;
-}
-
-.tab-button:hover {
-  background-color: #e0e7f1;
-}
-
-.tab-button:first-child {
-  background-color: #FBFBFB;
-  color: red;
-  border-bottom: none;
-  
-}
-
-.tab-button.active {
-  background-color: white;
-}
-
-.search-bar {
-  float: right;
-  margin-right: 5px;
-  display: flex;
-
-}
-
-.search-bar button {
-  height: 23px;
-  border: 1px solid #85888A;
-  background-color: white;
-}
-
-.search-input {
-  border: 1px solid #85888A;
-  
-  padding: 3px;
-  width: 200px;
-  height: 15px;
-}
-
-
-.user-button {
-  border: 1px solid #85888A;
-  border-radius: 3px;
-  background-color: #f0f0f0;
-  padding: 4px 6px;
-  margin-left: 5px;
-  font-size: 10px;
-  white-space: nowrap;
 }
 
 .posts {
@@ -280,33 +247,21 @@ ul {
   height: 100%;
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .posts {
-    width: 100%;
-  }
-}
-
-
 .post-container {
   display: flex;
   align-items: start;
   justify-content: start;
-  border-top: 1px solid #828282; /* Sets border on all sides */
-  border-bottom: none; /* Removes bottom border */
+  border-top: 1px solid #828282;
+  border-bottom: none;
   flex-direction: row;
   height: 100%;
   width: 100%;
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .post-container {
-    flex-direction: column;
-  }
-}
-
-
+/**
+ * Post Styling
+ * Individual post elements
+ */
 .post {
   display: flex;
   padding-top: 8px;
@@ -317,7 +272,6 @@ ul {
 
 .post:hover {
   background-color: #c4d4eb;
-
 }
 
 .post-rank {
@@ -332,39 +286,6 @@ ul {
   font-size: 12px;
 }
 
-.voting {
-  width: 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.vote-arrow, .vote-arrow-down {
-  display: block;
-  width: 100%;
-  height: 14px;
-  margin: 2px 0;
-  cursor: pointer;
-  color: #c6c6c6;
-  font-size: 16px;
-}
-
-.posts .vote-arrow:first-child{
-  color: green;
-}
-
-.vote-arrow-down{
-  color: red;
-}
-
-
-.vote-score {
-  font-weight: bold;
-  color: #c6c6c6;
-}
-
 .post-thumbnail {
   width: 70px;
   margin: 0px;
@@ -375,9 +296,6 @@ ul {
   justify-content: center;
 }
 
-a {
-  color: #2931F8;
-}
 .post-content {
   background-color: #F5F5F5;
   padding: 12px 12px 3px 12px;
@@ -413,6 +331,48 @@ a {
   gap: 1.3rem;
 }
 
+.post-options a {
+  color: #888;
+  font-size: px;
+  margin-right: 4px;
+}
+
+/**
+ * Voting Elements
+ * Upvote/downvote controls
+ */
+.voting {
+  width: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.vote-arrow, .vote-arrow-down {
+  display: block;
+  width: 100%;
+  height: 14px;
+  margin: 2px 0;
+  cursor: pointer;
+  color: #c6c6c6;
+  font-size: 16px;
+}
+
+.posts .vote-arrow:first-child{
+  color: green;
+}
+
+.vote-arrow-down {
+  color: red;
+}
+
+.vote-score {
+  font-weight: bold;
+  color: #c6c6c6;
+}
+
 .post-votes {
   display: flex;
   align-items: center;
@@ -427,13 +387,18 @@ a {
   color: blue;
 }
 
-
-.post-options a {
-  color: #888;
-  font-size: px;
-  margin-right: 4px;
+.up {
+  color: #ff8b60;
 }
 
+.down {
+  color: #9494ff;
+}
+
+/**
+ * Post Editing
+ * Form elements for post editing
+ */
 .post-edit {
   width: 100%;
   display: flex;
@@ -452,7 +417,6 @@ a {
   padding: 4px;
 }
 
-
 .format-help {
   display: flex;
   justify-content: flex-end;
@@ -466,10 +430,10 @@ a {
   margin-right: -10px;
 }
 
- a:hover {
-  text-decoration: underline;
-}
-
+/**
+ * Comments Section
+ * Comment threads and styling
+ */
 .comments-section {
   border-left: 1px solid #85888A;
   width: 50%;
@@ -477,15 +441,46 @@ a {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Apply column layout for small screens */
-@media (max-width: 1040px) {
-  .comments-section {
-    width: 100%;
-  }
+.comment-thread {
+  position: relative;
+  margin: auto;
+  border-top: 1px solid #85888A;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-size: 10px;
+  background-color: #F5F5F5;
+  z-index: 1;
+  padding-bottom: 8rem;
+}
+
+.comments {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  position: relative;
+  border-left: 1px solid #cecece;
+  position: relative;
 }
 
 .comment {
-  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.comment header {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment header span {
+  color: gray;
+}
+
+.comment p {
+  margin: 5px 0;
 }
 
 .comment-info {
@@ -509,20 +504,15 @@ a {
   margin-right: 4px;
 }
 
-.comment-thread {
-  position: relative;
-  margin: auto;
-  border-top: 1px solid #85888A;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  font-size: 10px;
-  background-color: #F5F5F5;
-  z-index: 1;
-  padding-bottom: 8rem;
+.perma {
+  color: gray;
+  font-size: 8px;
 }
 
-.comment header span {
-  color: gray;
+.replies {
+  margin-left: 30px;
+  border-left: 1px solid #cecece;
+  padding-left: 10px;
 }
 
 .arrows {
@@ -542,44 +532,44 @@ a {
   font-size: 10px;
 }
 
+/**
+ * Comment Thread Speech Bubble
+ * Creates a speech bubble effect for comment threads
+ */
 .comment-thread::after {
   content: "";
   position: absolute;
-  top: -1px; /* Align with the top border */
-  right: 30px; /* Adjust position */
+  top: -1px;
+  right: 30px;
   width: 0;
   height: 0;
-  border-left: 13px solid transparent; /* Increased for clarity */
+  border-left: 13px solid transparent;
   border-right: 13px solid transparent;
-  border-top: 13px solid black; /* Gray border for left & right */
+  border-top: 13px solid black;
 }
 
 .comment-thread::before {
   content: "";
   position: absolute;
-  top: 0px; /* Adjust to ensure proper overlay */
-  right: 31px; /* Fine-tuned alignment */
+  top: 0px;
+  right: 31px;
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid black; /* White fill */
-  z-index: 1; /* Ensure it overlays correctly */
+  border-top: 12px solid black;
+  z-index: 1;
 }
 
+/**
+ * Navigation Menus
+ * Floating menus and sub-menus
+ */
 .floating-menu {
-  position:absolute;
+  position: absolute;
   bottom: -0.76px;
   left: 13rem;
   z-index: 100;
-}
-
-@media (max-width: 1040px) {
-  .floating-menu {
-    width: 100%;
-    bottom: -44px;
-    left: 0rem;
-  }
 }
 
 .sub-menu {
@@ -592,60 +582,10 @@ a {
   position: relative;
 }
 
-@media (max-width: 1040px) {
-  .main-menu, .sub-menu {
-    width: 100%;
-  }
-}
-
-.redditLogo {
-  width: 14rem;
-  height: 2rem;
-}
-
-.comment {
-  padding-left: 10px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.comments {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  position: relative;
-  border-left: 1px solid #cecece;
-  position: relative;
-}
-
-.perma {
-  color: gray;
-  font-size: 8px;
-}
-
-
-.comment header {
-  font-weight: bold;
-  color: #333;
-}
-.comment p {
-  margin: 5px 0;
-}
-.replies {
-  margin-left: 30px;
-  border-left: 1px solid #cecece;
-  padding-left: 10px;
-}
-.up {
-  color: #ff8b60;
-}
-
-.down {
-  color: #9494ff;
-}
-
+/**
+ * Pagination
+ * Page navigation controls
+ */
 .pagination {
   text-align: right;
   margin-top: 15px;
@@ -658,4 +598,87 @@ a {
   border-radius: 3px;
   padding: 2px 8px;
   margin: 0 2px;
+}
+
+/**
+ * Link Styling
+ * Specific link styling
+ */
+a {
+  color: #2931F8;
+}
+
+/**
+ * Responsive Design
+ * Media queries for different screen sizes
+ */
+@media (max-width: 1040px) {
+  .content {
+    overflow: auto;
+  }
+
+  .main-reddit-content {
+    flex-direction: column;
+  }
+
+  .user-panel {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 0px;
+    max-height: 350px;
+    display: flex;
+  }
+
+  .sidebar-section, .sidebar-section-2 {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sidebar-footer strong {
+    padding-left: 65px;
+    overflow: visible;
+  }
+
+  .main-content {
+    overflow: visible;
+  }
+
+  .tab-menu {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+
+  .posts {
+    width: 100%;
+  }
+
+  .post-container {
+    flex-direction: column;
+  }
+  
+  .comments-section {
+    width: 100%;
+  }
+  
+  .main-menu, .sub-menu {
+    width: 100%;
+  }
+  
+  .floating-menu {
+    width: 100%;
+    bottom: -44px;
+    left: 0rem;
+  }
 }
