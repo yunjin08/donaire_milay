@@ -1,0 +1,235 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+a {
+  color: #369;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #cee3f8;
+  padding: 5px 0;
+  border-bottom: 1px solid #5f99cf;
+}
+
+.logo {
+  float: left;
+  margin-left: 20px;
+}
+
+.user-panel {
+  float: right;
+  margin-right: 20px;
+  color: #336699;
+}
+
+.clear {
+  clear: both;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  width: 150px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.sidebar-section {
+  margin-bottom: 15px;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main-content {
+  flex: 1;
+  background-color: white;
+  padding: 5px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.tab-menu {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #369;
+  font-weight: bold;
+  padding: 2px 6px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background-color: white;
+}
+
+.search-bar {
+  float: right;
+  margin-right: 5px;
+}
+
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px;
+  width: 200px;
+}
+
+.user-controls {
+  float: right;
+  margin-top: 0;
+}
+
+.user-button {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  margin-left: 5px;
+  font-size: 11px;
+}
+
+.posts {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post {
+  display: flex;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-rank {
+  width: 20px;
+  text-align: right;
+  padding-right: 5px;
+  color: #c6c6c6;
+  font-size: 14px;
+}
+
+.voting {
+  width: 40px;
+  text-align: center;
+}
+
+.vote-arrow {
+  display: block;
+  width: 100%;
+  height: 14px;
+  margin: 2px 0;
+  cursor: pointer;
+  color: #c6c6c6;
+  font-size: 16px;
+}
+
+.vote-score {
+  font-weight: bold;
+  color: #c6c6c6;
+}
+
+.post-thumbnail {
+  width: 70px;
+  height: 50px;
+  margin-right: 5px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-content {
+  flex: 1;
+}
+
+.post-title {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.post-info {
+  color: #888;
+  font-size: 10px;
+}
+
+.post-options a {
+  color: #888;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.comments-section {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.comment {
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #eee;
+  padding-bottom: 5px;
+}
+
+.comment-info {
+  color: #888;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.comment-text {
+  margin-left: 20px;
+}
+
+.comment-options {
+  margin-top: 2px;
+  margin-left: 20px;
+}
+
+.comment-options a {
+  color: #888;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.up {
+  color: #ff8b60;
+}
+
+.down {
+  color: #9494ff;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination-button {
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin: 0 2px;
+}
