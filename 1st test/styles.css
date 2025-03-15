@@ -1,4 +1,12 @@
-/* General Layout */
+/* ==========================================================================
+   News Website Styles
+   This stylesheet contains all the styles for the news website layout,
+   including responsive design, card layouts, and typography
+   ========================================================================== */
+
+/* Base Layout Styles
+   ========================================================================== */
+/* Sets up the main container layout with a clean, modern appearance */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,98 +14,117 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f4f4f9;
+    background-color: #f4f4f9;  /* Light grayish background for better contrast */
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;  /* Ensures full viewport height coverage */
 }
 
+/* Main content grid layout with news feed and sidebar */
 .news-container {
-    max-width: 800px;
+    max-width: 800px;  /* Maintains readable content width */
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1fr;  /* 75% main content, 25% sidebar split */
     gap: 20px;
     padding: 20px;
 }
 
+/* Header styling for the page title section */
 header {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1;  /* Spans full width across grid */
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* News feed layout configuration */
 .newsfeed {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px;  /* Consistent spacing between news items */
 }
 
-/* Article Cards */
+/* Article Card Styling
+   ========================================================================== */
+/* Individual news card design with shadow and hover effects */
 .news-card {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+    border-radius: 8px;  /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle elevation */
+    overflow: hidden;  /* Ensures content stays within bounds */
+    transition: box-shadow 0.3s ease;  /* Smooth hover transition */
 }
 
+/* Enhanced shadow effect on hover for better interactivity */
 .news-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
+/* Article content container */
 .news-content {
     padding: 20px;
 }
 
+/* Article title styling */
 .news-content h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin: 0.5em 0;
 }
 
+/* Article date styling */
 .news-content .date {
-    color: #a7a7a7;
+    color: #a7a7a7;  /* Subtle gray for secondary information */
     font-size: 0.9em;
 }
 
+/* Article image styling */
 .news-card img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block;  /* Removes unwanted spacing below images */
 }
 
+/* Link Styling
+   ========================================================================== */
+/* Base link appearance */
 a {
     text-decoration: none;
     color: #838383;
 }
 
-/* Hover Effects */
+/* Interactive hover state for links */
 a:hover {
-    color: #007BFF;
+    color: #007BFF;  /* Bright blue for better visibility */
 }
 
-/* Responsive Design */
+/* Responsive Design Adjustments
+   ========================================================================== */
+/* Mobile-friendly layout adjustments for screens under 600px */
 @media (max-width: 600px) {
     .news-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* Stack content vertically on mobile */
     }
 
     .sidebar {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1;  /* Full width sidebar on mobile */
     }
 }
 
-/* Typography and Colors */
+/* Typography and Sidebar Styling
+   ========================================================================== */
+/* Main heading style */
 h1 {
     font-size: 2.5em;
     color: #333;
 }
 
+/* Sidebar heading style */
 .sidebar h2 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
+/* Sidebar list styling */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -107,6 +134,7 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Sidebar link styling with smooth color transition */
 .sidebar a {
     text-decoration: none;
     color: #333;
