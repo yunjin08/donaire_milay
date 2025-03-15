@@ -1,6 +1,6 @@
 body {
   font-family: Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 9px;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -11,7 +11,7 @@ body {
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .content {
     overflow: auto;
   }
@@ -23,10 +23,15 @@ a {
   text-decoration: none;
 }
 
+.littleBig {
+  height: 8rem;
+  width: 11.1rem;
+}
+
 .header {
-  background-color: #cee3f8;
+  background-color: #DCECFF;
   padding: 5px 0;
-  border-bottom: 1px solid rgb(135, 135, 135);
+  border-bottom: 1px solid #85888A;
   z-index: 0;
 }
 
@@ -39,12 +44,13 @@ a {
   margin-right: 20px;
   color: #336699;
   position: absolute;
-  top: -20px;
+  top: -36px;
   right: -20px;
-  padding: 2px;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-bottom: 1px solid transparent;
+  font-size: 10px;
+  padding: 8px;
+  background-color: #EEF1F2;
+  border: 1px solid #85888A;
+  border-bottom: 1px solid #EEF1F2;
   z-index: 10;
 }
 
@@ -60,25 +66,45 @@ a {
 
 .content {
   height: 100%;
+}
+
+.main-reddit-content {
   display: flex;
+  height: 100%;
+}
+
+@media (max-width: 1040px) {
+  .main-reddit-content {
+    flex-direction: column;
+  }
+  .user-panel {
+    display: none;
+  }
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .content {
     flex-direction: column;
   }
 }
 
 .sidebar {
-  width: 180px;
-  background-color: #e5edf9;
+  margin-top: -1.5rem;
+  width: 200px;
+  height: 94%;
+  background-color: #EFF8FF;
+  border: 1px solid #85888A;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 50;
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .sidebar {
     width: 100%;
+    margin-top: 0px;
+    max-height: 350px;
     display: flex;
   }
   .sidebar-section, .sidebar-section-2 {
@@ -94,12 +120,15 @@ a {
 .sidebar-section {
   margin-bottom: 15px;
   font-size:9px;
+  color: #8F9296;
 }
 
 .sidebar-section-2 .sidebar-section {
-  background-color: #bbcfea;
+  max-width: 84%;
+  background-color: #DCECFF;
   padding: 2px;
-  padding-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 ul {
@@ -112,12 +141,14 @@ ul {
 }
 
 .sidebar-item {
-  padding: 4px;
+  padding: 1px;
   padding-left: 16px;
 }
 
 .sidebar-item:nth-child(8) {
   color: red;
+  border-top: 1px solid #85888A;
+  border-bottom: 1px solid #85888A;
   background-color: white;
 }
 
@@ -126,6 +157,22 @@ ul {
   margin-top: 3px;
   color: rgb(76, 76, 76);
 }
+
+.sidebar-footer strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  margin: 0;
+}
+
+@media (max-width: 1040px) {
+  .sidebar-footer strong {
+    padding-left: 65px;
+    overflow: visible;
+  }
+}
+
 
 
 .sidebar-title {
@@ -138,12 +185,12 @@ ul {
   flex: 1;
   font-size: 9px;
   background-color: #f0f0f0;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  overflow: auto;
+  border-left: 1px solid #85888A;
+  border-right: 1px solid #85888A;
+  overflow: scroll;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .main-content {
     overflow: visible;
   }
@@ -151,28 +198,29 @@ ul {
 
 
 .tab-menu {
-  background-color: #e5e5e5;
+  background-color: #EEF1F2;
   display: flex;
   flex: 1;
-  border: 1px solid #ccc;
-  padding: 3px;
+  padding: 6px;
   padding-right: 24px;
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .tab-menu {
-  padding-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
   }
 }
 
 .tab-button {
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  color: #369;
+  border: 1px solid #85888A;
+  border-radius: 1px;
+  color: #3468AB;
   font-weight: bold;
-  padding: 2px 6px;
+  padding: 6px 6px;
   margin-right: 2px;
   cursor: pointer;
 }
@@ -182,7 +230,10 @@ ul {
 }
 
 .tab-button:first-child {
+  background-color: #FBFBFB;
   color: red;
+  border-bottom: none;
+  
 }
 
 .tab-button.active {
@@ -197,26 +248,27 @@ ul {
 }
 
 .search-bar button {
-  height: 21px;
-  border: 1px solid #ccc;
+  height: 23px;
+  border: 1px solid #85888A;
   background-color: white;
 }
 
 .search-input {
-  border: 1px solid #ccc;
-  padding: 2px;
+  border: 1px solid #85888A;
+  
+  padding: 3px;
   width: 200px;
   height: 15px;
 }
 
 
 .user-button {
-  border: 1px solid #ccc;
+  border: 1px solid #85888A;
   border-radius: 3px;
   background-color: #f0f0f0;
-  padding: 2px 6px;
+  padding: 4px 6px;
   margin-left: 5px;
-  font-size: 9px;
+  font-size: 10px;
   white-space: nowrap;
 }
 
@@ -229,7 +281,7 @@ ul {
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .posts {
     width: 100%;
   }
@@ -240,7 +292,7 @@ ul {
   display: flex;
   align-items: start;
   justify-content: start;
-  border: 1px solid #ccc; /* Sets border on all sides */
+  border-top: 1px solid #828282; /* Sets border on all sides */
   border-bottom: none; /* Removes bottom border */
   flex-direction: row;
   height: 100%;
@@ -248,7 +300,7 @@ ul {
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .post-container {
     flex-direction: column;
   }
@@ -257,7 +309,10 @@ ul {
 
 .post {
   display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-bottom: 1px solid rgb(201, 201, 201);
+  background-color: #FBFBFB;
 }
 
 .post:hover {
@@ -273,7 +328,8 @@ ul {
   justify-content: center;
   padding-right: 5px;
   color: #c6c6c6;
-  font-size: 9px;
+  padding-left: 8px;
+  font-size: 12px;
 }
 
 .voting {
@@ -285,7 +341,7 @@ ul {
   flex-direction: column;
 }
 
-.vote-arrow {
+.vote-arrow, .vote-arrow-down {
   display: block;
   width: 100%;
   height: 14px;
@@ -295,6 +351,15 @@ ul {
   font-size: 16px;
 }
 
+.posts .vote-arrow:first-child{
+  color: green;
+}
+
+.vote-arrow-down{
+  color: red;
+}
+
+
 .vote-score {
   font-weight: bold;
   color: #c6c6c6;
@@ -302,6 +367,7 @@ ul {
 
 .post-thumbnail {
   width: 70px;
+  margin: 0px;
   background-color: blue;
   margin-right: 5px;
   display: flex;
@@ -309,13 +375,18 @@ ul {
   justify-content: center;
 }
 
+a {
+  color: #2931F8;
+}
 .post-content {
+  background-color: #F5F5F5;
+  padding: 12px 12px 3px 12px;
   flex: 1;
-  padding: 16px 16px 3px 16px;
+  font-size: 10px;
 }
 
 .post-title {
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 2px;
 }
 
@@ -323,15 +394,19 @@ ul {
   color: #888;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 0px;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .post-score {
   background-color: white;
   display: flex;
   padding: 5px;
+  font-size: 12px;
+  margin-top: 4px;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -368,7 +443,7 @@ ul {
 
 .post-edit-buttons {
   width: 100%;
-  margin-right: 30px;
+  margin-right: 20px;
   align-items: end;
 }
 
@@ -396,13 +471,14 @@ ul {
 }
 
 .comments-section {
-  border: 1px solid #ccc;
+  border-left: 1px solid #85888A;
   width: 50%;
   font-size: 9px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Apply column layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .comments-section {
     width: 100%;
   }
@@ -436,13 +512,13 @@ ul {
 .comment-thread {
   position: relative;
   margin: auto;
-  border-top: 1px solid gray;
-  border-left: 1px solid gray;
+  border-top: 1px solid #85888A;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 16px;
   font-size: 10px;
-  background: rgb(234, 234, 234);
-  z-index: 0;
+  background-color: #F5F5F5;
+  z-index: 1;
+  padding-bottom: 8rem;
 }
 
 .comment header span {
@@ -461,8 +537,9 @@ ul {
 }
 
 .comment-thread button {
-  height: 1.5rem;
-  margin-top: 4px;
+  height: 1.2rem;
+  margin-top: 10px;
+  font-size: 10px;
 }
 
 .comment-thread::after {
@@ -492,13 +569,16 @@ ul {
 
 .floating-menu {
   position:absolute;
-  bottom: -2px;
+  bottom: -0.76px;
+  left: 13rem;
   z-index: 100;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .floating-menu {
-    bottom: -14px;
+    width: 100%;
+    bottom: -44px;
+    left: 0rem;
   }
 }
 
@@ -512,14 +592,21 @@ ul {
   position: relative;
 }
 
+@media (max-width: 1040px) {
+  .main-menu, .sub-menu {
+    width: 100%;
+  }
+}
+
 .redditLogo {
   width: 14rem;
   height: 2rem;
 }
 
 .comment {
-  padding: 10px;
-  margin: 10px 0;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   border-radius: 5px;
   position: relative;
 }
